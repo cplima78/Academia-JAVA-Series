@@ -1,1 +1,13 @@
-{ "properties": [ ] }
+{
+  "properties": [
+    {
+      "name": "spring,jpa.hibernate.ddl-auto",
+      "type": "java.lang.String",
+      "description": "Description for spring,jpa.hibernate.ddl-auto."
+    },
+    {
+      "name": "spring.jpa.format-sql",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.format-sql."
+    }
+  ] }

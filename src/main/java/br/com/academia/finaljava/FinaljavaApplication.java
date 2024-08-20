@@ -1,27 +1,14 @@
 package br.com.academia.finaljava;
 
-import br.com.academia.finaljava.model.DadosSerie;
-import br.com.academia.finaljava.service.ConsumoApi;
-import br.com.academia.finaljava.service.ConverteDados;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinaljavaApplication implements CommandLineRunner {
+public class FinaljavaApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FinaljavaApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		var consumoApi = new ConsumoApi();
-		var json = consumoApi.obterDados("https://www.omdbapi.com/?t=gilmore+girls&apikey=4e80e981");
-		System.out.println(json);
-		ConverteDados conversor = new ConverteDados();
-		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
-		System.out.println(dados);
 
-	}
 }
